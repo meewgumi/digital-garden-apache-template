@@ -36,6 +36,10 @@ footer {
   padding-top: 1em;
 }
 
+footer ul, footer li {
+  list-style-type: none;
+}
+
 img {
   max-width: 100%;
   display: block;

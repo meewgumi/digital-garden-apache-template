@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-nav_item: true
+navitem: true
 ---
 
 *This is an about page.*
