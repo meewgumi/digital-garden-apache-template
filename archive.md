@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Archive
-navitem: true
 ---
 # Archive
 ## Notes
