@@ -8,6 +8,10 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Local environment
+vendor/
+.bundle/
+
 # Notes graph metadata
 _includes/notes_graph.json
 
