@@ -27,13 +27,13 @@
 
   {% if page.date %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-  <meta property="article:author" content="{{ site.baseurl }}/">
+  <meta property="article:author" content="{{ site.url }}/">
   {% endif %}
 
-  <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}" />
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.baseurl }}{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">
   {% endif %}
 
   <title>

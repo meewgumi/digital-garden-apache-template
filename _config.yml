@@ -1,7 +1,8 @@
 title:               My digital garden
 exclude:             ['_includes/notes_graph.json']
-# BaseURL affects metadata in head.html
-baseurl:             'https://megumi.website'
+url:                 'https://megumi.website'
+# BaseURL is for relative links, ie. if you save in a subdirectory, enter /directory here
+baseurl:             ''
 
 # https://jekyllrb.com/docs/configuration/options/
 timezone: America/Los_Angeles
