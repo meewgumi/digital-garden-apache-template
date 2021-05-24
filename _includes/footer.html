@@ -1,1 +1,6 @@
+---
+---
 This is the footer. Include anything you'd like here, like a link to an <a class="internal-link" href="about.html">About</a> page. <a class="internal-link" href="archive.html">Archive</a>.
+{% for page in site.pages %}
+<li><a href="{{ page.url | where:"layout","page" }}">{{ page.title }}</a></li>
+{% endfor %}
