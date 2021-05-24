@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Archive
+nav_item: true
 ---
 # Archive
 ## Notes
