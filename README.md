@@ -10,6 +10,9 @@ Powered by: Github --> DeployHQ --> Dreamhost
 - Removed relative permalinks due to error I got in [my GH Pages repo](https://github.com/meewgumi/digital-garden-ghpages/commits/main)
 - Renamed `notes-graph` for the same reason as above
 - Added variable in `_config.yml` for `show_notes_graph` and set to `false` by default
+- Created `archive.md` with automatic list of all notes
+- Added back `site.url` and configured metadata accordingly. `baseurl` is now the subdirectory, blank by default
+- 
 
 ### Apache Specific Updates
 - Need to force `.html` extension for this to work on Dreamhost

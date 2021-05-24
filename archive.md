@@ -10,15 +10,13 @@ title: Archive
 {% endfor %}
 </ul>
 
-{% for note in site.notes %}
-{% if category == "Cats" %}
+{% if note.category == "Cats" %}
 ### Cats
-  [{{note.title}}]({{note.url}})
-{% elsif category == "Getting Started" %}
+  {% for note in site.notes %}[{{note.title}}]({{note.url}}){% endfor %}
+{% elsif note.category == "Getting Started" %}
 ### Getting Started
-  [{{note.title}}]({{note.url}})
+  {% for note in site.notes %}[{{note.title}}]({{note.url}}){% endfor %}
 {% else %}
-  ### Uncategorized
-  [{{note.title}}]({{note.url}})
+### Uncategorized
+  {% for note in site.notes %}[{{note.title}}]({{note.url}}){% endfor %}
 {% endif %}
-{% endfor %}
