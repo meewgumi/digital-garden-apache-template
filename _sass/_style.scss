@@ -37,10 +37,10 @@ footer {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
-  margin: 0 auto;
-  max-height: 75vh;
+  // margin: 0 auto;
+  // max-height: 75vh;
   border-radius: $border-radius;
 }
 
@@ -71,6 +71,10 @@ color: #000;
 }
 
 .archive p a::after {
+  display: none;
+}
+
+.archive p~* {
   display: none;
 }
 
