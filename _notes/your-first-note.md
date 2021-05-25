@@ -99,6 +99,14 @@ end
 $ cat /dev/urandom | grep "the answer to life" # shell scripts look nice too
 ```
 
+### Archive
+The archive page displays all notes in reverse chronological order. Design is inspired by https://maximevaillancourt.com/blog.
+
+Archive page includes:
+- Note title with link to note
+- Note theme (More on theme variables in [[Note Formatting#Themes aka Categories]])
+- Month and Year modified
+- Excerpt
 
 ### Next steps
 To deploy via FTP or SSH, configure [Jekyll Build Commands](https://www.deployhq.com/guides/jekyll) and `vendor` caching on [DeployHQ](https://www.deployhq.com/r/nx7qct). Connect to your Github Repo and publish!
