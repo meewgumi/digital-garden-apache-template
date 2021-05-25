@@ -46,18 +46,24 @@ For internal links, either add `class="internal-link"` to the HTML or add `{: .i
 -   `>>` will become a right guillemet (like this ») – an optional leading space will become a non-breakable space
 
 ## Github Flavored Markdown
+This site uses [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages), which extends the default Kramdown functionality.
+
+Most importantly, you can create tables that are compatible with Obsidian and Github:
+
 | foo | bar |
 | --- | --- |
 | baz | bim |
 
-|---
-| Default aligned | Left aligned | Center aligned | Right aligned
-|-|:-|:-:|-:
-| First body part | Second cell | Third cell | fourth cell
-| Second line |foo | **strong** | baz
-| Third line |quux | baz | bar
-|---
-| Second body
-| 2 line
-|===
-| Footer row
+The table above was created with this markup:
+```
+| foo | bar |
+| --- | --- |
+| baz | bim |
+```
+
+More info in the [GFM Documentation](https://github.github.com/gfm/#tables-extension-)
+
+Other options you can add to Commonmark in `_config.yml`
+```
+Valid options: DEFAULT, VALIDATE_UTF8, SMART, LIBERAL_HTML_TAG, FOOTNOTES, STRIKETHROUGH_DOUBLE_TILDE, SOURCEPOS, HARDBREAKS, SAFE, NOBREAKS, GITHUB_PRE_LANG, TABLE_PREFER_STYLE_ATTRIBUTES, FULL_INFO_STRING
+```

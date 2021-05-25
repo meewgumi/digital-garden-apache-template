@@ -27,8 +27,11 @@ permalink:           slug
 # Set to 'true' to generate excerpts for pages. Notes are technically pages.
 page_excerpts:      true
 
-kramdown:
-  input: GFM
+# Enabled CommonMark instead of default kramdown. All extensions are enabled, but you can choose to remove some by referencing https://github.github.com/gfm/
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 plugins:
   - jekyll-last-modified-at

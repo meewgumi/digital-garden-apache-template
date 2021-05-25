@@ -8,3 +8,7 @@ gem "jekyll", "~> 4.0"
 gem "jekyll-last-modified-at", git: "https://github.com/meewgumi/jekyll-last-modified-at", branch: "main"
 gem "webrick", "~> 1.7"
 gem "nokogiri"
+
+group :jekyll_plugins do
+  gem 'jekyll-commonmark-ghpages'
+end
