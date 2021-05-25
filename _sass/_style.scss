@@ -39,11 +39,12 @@ footer {
 img {
   width: 100%;
   display: block;
-  // margin: 0 auto;
+  margin: 0 auto;
   // max-height: 75vh;
   border-radius: $border-radius;
 }
 
+// Archive page Styling
 ul.archive, .archive li {
   list-style-type: none;
   margin-left: 0;
@@ -54,8 +55,8 @@ ul.archive, .archive li {
   margin: 1em 0 1.25em;
 }
 
-.archive h1, .archive h2, .archive h3 {
-  display: none;
+.archive p {
+  margin-top: 0
 }
 
 .archive a.internal-link {
@@ -66,11 +67,12 @@ border-bottom: 2px solid #ddd;
 color: #000;
 }
 
-.archive p {
-  margin-top: 0
+.archive span {
+  opacity: 0.6;
 }
 
-.archive p a::after {
+// Hide excerpt content except p
+.archive h1, .archive h2, .archive h3 {
   display: none;
 }
 
@@ -78,9 +80,10 @@ color: #000;
   display: none;
 }
 
-.archive span {
-  opacity: 0.6;
+.archive p a::after {
+  display: none;
 }
+
 
 blockquote {
   padding: 1.5em;
