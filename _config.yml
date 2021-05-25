@@ -30,7 +30,7 @@ page_excerpts:      true
 # Enabled CommonMark instead of default kramdown. All extensions are enabled, but you can choose to remove some by referencing https://github.github.com/gfm/
 markdown: CommonMarkGhPages
 commonmark:
-  options: ["SMART", "FOOTNOTES"]
+  options: ["SMART", "FOOTNOTES", "VALIDATE_UTF8", "GITHUB_PRE_LANG", "TABLE_PREFER_STYLE_ATTRIBUTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 plugins:

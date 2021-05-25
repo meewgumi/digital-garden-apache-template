@@ -66,4 +66,4 @@ More info in the [GFM Documentation](https://github.github.com/gfm/#tables-exten
 Other options you can add to Commonmark in `_config.yml`
 ```
 Valid options: DEFAULT, VALIDATE_UTF8, SMART, LIBERAL_HTML_TAG, FOOTNOTES, STRIKETHROUGH_DOUBLE_TILDE, SOURCEPOS, HARDBREAKS, SAFE, NOBREAKS, GITHUB_PRE_LANG, TABLE_PREFER_STYLE_ATTRIBUTES, FULL_INFO_STRING
-```
+``
