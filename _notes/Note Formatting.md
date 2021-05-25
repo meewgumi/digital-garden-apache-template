@@ -3,7 +3,7 @@ theme: Getting Started
 ---
 
 ## Front Matter
-At the top of each new note, you must include the triple dashes that make up Jekyll Front Matter.
+At the top of each new note, you must include the triple dashes that make up [Jekyll Front Matter](https://jekyllrb.com/docs/front-matter/).
 
 ````
 ---
@@ -28,3 +28,10 @@ In the example above, the filename is `cats.md` but the longer title shows up in
 On the [[archive]] page, I've set it to automatically display all notes and their themes (if any). Think of a theme like a category without the chronological blog connotation. Inspired by [Low Tech Mag's Archive Page](https://solar.lowtechmagazine.com/archives.html).
 
 Themes will also display underneath note title, if they are not null. Eventually I want to make a theme page to view all notes with common themes.
+
+## Internal Links
+By default, all links created with `<a>` will show up as external links, open in new window, and display a small arrow.
+
+For internal links, either add `class="internal-link"` to the HTML or add `{: .internal-link}` after a Markdown link like this:
+
+```[Markdown Link](/cats){: .internal-link}```

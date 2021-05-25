@@ -4,14 +4,15 @@ Demo: [megumi.website](https://megumi.website)
 Powered by: Github --> DeployHQ --> Dreamhost
 
 ### General Template Updates
-- Updated `site.baseurl` in `head.html` metadata, added `.html` conditional clause, removed `site.url` variable
+- Updated `site.baseurl` and `site.url` in `head.html` metadata, added `.html` conditional clause
+	- Added `url:` config in `_config.yml`
 - Forked Last Modified plugin to my own account & deleted stale branches
-- Added timezone to `_config.yml` for Last Modified plugin to work
+- Added timezone to `_config.yml` for Last Modified plugin to work with my server setup
 - Removed relative permalinks due to error I got in [my GH Pages repo](https://github.com/meewgumi/digital-garden-ghpages/commits/main)
 - Renamed `notes-graph` for the same reason as above
 - Added variable in `_config.yml` for `show_notes_graph` and set to `false` by default
 - Created `archive.md` with automatic list of all notes
-- Added back `site.url` and configured metadata accordingly. `baseurl` is now the subdirectory, blank by default
+- New variable `theme:` which displays on Archive and Note, if it exists
 
 ### Apache Specific Updates
 - Need to force `.html` extension for this to work on Dreamhost
@@ -26,7 +27,7 @@ Powered by: Github --> DeployHQ --> Dreamhost
 ### Notes
 With these changes, this template would work on any Apache host via [DeployHQ](https://www.deployhq.com/r/nx7qct). I chose DeployHQ because it's owned by Krystal UK and runs on 100% renewable energy.
 
-Must use an apex domain or subdomain. I got errors with the base URL when attempting to use a subdirectory.
+Your path must not have any spaces in it or your `bundle` command will fail!
 
 ## License
 [Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) is available under the [MIT license](LICENSE.md).
