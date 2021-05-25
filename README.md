@@ -13,6 +13,8 @@ Powered by: Github --> DeployHQ --> Dreamhost
 - Added variable in `_config.yml` for `show_notes_graph` and set to `false` by default
 - Created `archive.md` with automatic list of all notes
 - New variable `theme:` which displays on Archive and Note, if it exists
+- Enabled page excerpts and displayed them on Archive page, hiding headings from displaying and formatting all links as internal links
+- For pages, automatically generate page heading from `title:` variable
 
 ### Apache Specific Updates
 - Need to force `.html` extension for this to work on Dreamhost
