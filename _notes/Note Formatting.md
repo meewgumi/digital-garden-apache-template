@@ -44,3 +44,20 @@ For internal links, either add `class="internal-link"` to the HTML or add `{: .i
 -   `...` will become an ellipsis (like this …)
 -   `<<` will become a left guillemet (like this «) – an optional following space will become a non-breakable space
 -   `>>` will become a right guillemet (like this ») – an optional leading space will become a non-breakable space
+
+## Github Flavored Markdown
+| foo | bar |
+| --- | --- |
+| baz | bim |
+
+|---
+| Default aligned | Left aligned | Center aligned | Right aligned
+|-|:-|:-:|-:
+| First body part | Second cell | Third cell | fourth cell
+| Second line |foo | **strong** | baz
+| Third line |quux | baz | bar
+|---
+| Second body
+| 2 line
+|===
+| Footer row
