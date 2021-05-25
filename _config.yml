@@ -1,5 +1,6 @@
 title:               My digital garden
-exclude:             ['_includes/notes_graph.json']
+# Remove obsidian-templates and delete the folder if you aren't using Obsidian Templates plugin
+exclude:             ['_includes/notes_graph.json','obsidian-templates']
 url:                 'https://megumi.website'
 # BaseURL is for relative links, ie. if you save in a subdirectory, enter /directory here
 baseurl:             ''
@@ -22,6 +23,9 @@ show_notes_graph: false
 open_external_links_in_new_tab: true
 
 permalink:           slug
+
+# Set to 'true' to generate excerpts for pages. Notes are technically pages.
+page_excerpts:      true
 
 plugins:
   - jekyll-last-modified-at

@@ -44,6 +44,40 @@ img {
   border-radius: $border-radius;
 }
 
+ul.archive, .archive li {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.archive li {
+  margin: 1em 0 1.25em;
+}
+
+.archive h1, .archive h2, .archive h3 {
+  display: none;
+}
+
+.archive a.internal-link {
+  background-color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+border-bottom: 2px solid #ddd;
+color: #000;
+}
+
+.archive p {
+  margin-top: 0
+}
+
+.archive p a::after {
+  display: none;
+}
+
+.archive span {
+  opacity: 0.6;
+}
+
 blockquote {
   padding: 1.5em;
   margin: 0;

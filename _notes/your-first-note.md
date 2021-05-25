@@ -4,7 +4,6 @@ theme: Getting Started
 ---
 
 ### Welcome!
-
 This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory.
 
 `.gitignore` is set to ignore Obsidian system files. I recommend setting Obsidian to automatically save attachments in the `/assets` folder.
