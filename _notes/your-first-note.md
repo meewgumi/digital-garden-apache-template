@@ -1,6 +1,6 @@
 ---
 title: Your first seed
-category: Getting Started
+theme: Getting Started
 ---
 
 ### Welcome!

@@ -12,7 +12,6 @@ Powered by: Github --> DeployHQ --> Dreamhost
 - Added variable in `_config.yml` for `show_notes_graph` and set to `false` by default
 - Created `archive.md` with automatic list of all notes
 - Added back `site.url` and configured metadata accordingly. `baseurl` is now the subdirectory, blank by default
-- 
 
 ### Apache Specific Updates
 - Need to force `.html` extension for this to work on Dreamhost

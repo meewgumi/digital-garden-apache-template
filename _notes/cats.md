@@ -1,6 +1,6 @@
 ---
 title: A note about cats
-category: Cats
+theme: Cats
 ---
 
 This is a second note with a poem with cats.
