@@ -5,7 +5,7 @@ theme: Getting Started
 ## Front Matter
 At the top of each new note, you must include the triple dashes that make up [Jekyll Front Matter](https://jekyllrb.com/docs/front-matter/).
 
-````
+````js
 ---
 ---
 ````
@@ -16,7 +16,7 @@ The title of the `.md` file will automatically become the note title heading, re
 ### Title Override
 Use variable `title:` in the front matter to create a note title that is different from the filename. 
 
-```
+```js
 ---
 title: A note about cats
 ---
@@ -55,15 +55,20 @@ Most importantly, you can create tables that are compatible with Obsidian and Gi
 | baz | bim |
 
 The table above was created with this markup:
-```
+`````js
 | foo | bar |
 | --- | --- |
 | baz | bim |
-```
+`````
 
 More info in the [GFM Documentation](https://github.github.com/gfm/#tables-extension-)
 
-Other options you can add to Commonmark in `_config.yml`
-```
+Other options you can add to Commonmark in `_config.yml`:
+
+```js
 Valid options: DEFAULT, VALIDATE_UTF8, SMART, LIBERAL_HTML_TAG, FOOTNOTES, STRIKETHROUGH_DOUBLE_TILDE, SOURCEPOS, HARDBREAKS, SAFE, NOBREAKS, GITHUB_PRE_LANG, TABLE_PREFER_STYLE_ATTRIBUTES, FULL_INFO_STRING
-``
+```
+
+Note that a code block created with ` `` ` has text wrapping, while ` ``` ` does not.
+
+Description of each option [here](https://github.com/gjtorikian/commonmarker#options)
