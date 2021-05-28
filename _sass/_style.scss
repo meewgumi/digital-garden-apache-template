@@ -70,19 +70,6 @@ color: #000;
   opacity: 0.6;
 }
 
-// Hide excerpt content except p
-.archive h1, .archive h2, .archive h3 {
-  display: none;
-}
-
-.archive p~* {
-  display: none;
-}
-
-.archive p a::after {
-  display: none;
-}
-
 
 blockquote {
   padding: 1.5em;
