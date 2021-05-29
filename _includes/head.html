@@ -3,16 +3,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
 
   <meta property="og:site_name" content="{{ site.title }}">
 
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+  <link rel="stylesheet" href="/styles.css">
 
   {% if page.excerpt %}
-  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
+  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}" />
   {% else %}
   <meta property="og:description" content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}" />
   {% endif %}
@@ -30,10 +30,14 @@
   <meta property="article:author" content="{{ site.url }}/">
   {% endif %}
 
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}" />
+  {% if page.url == "/" %}
+  <meta property="og:url" content="{{ site.url }}" />
+  {% else %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}" />
+  {% endif %}
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
   {% endif %}
 
   <title>

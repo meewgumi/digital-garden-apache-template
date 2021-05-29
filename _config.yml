@@ -1,15 +1,14 @@
-title:               My digital garden
-# Remove obsidian-templates and delete the folder if you aren't using Obsidian Templates plugin
-exclude:             ['_includes/notes_graph.json','obsidian-templates']
-url:                 'https://megumi.website'
-# BaseURL is for relative links, ie. if you save in a subdirectory, enter /directory here
-baseurl:             ''
+title:               garden.megu.space
+url:                 'https://garden.megu.space'
 
 # https://jekyllrb.com/docs/configuration/options/
 timezone: America/Los_Angeles
 
 # Comment out .htaccess if you're uploading to a non-Apache server such as Netlify
 include:             ['.htaccess']
+
+# Remove obsidian-templates and delete the folder if you aren't using Obsidian Templates plugin
+exclude:             ['_includes/notes_graph.json','obsidian-templates']
 
 # If you are using a host that cannot resolve URLs that do
 # not end with .html (such as Neocities), set this to 'true'.
