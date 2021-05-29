@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="/styles.css">
 
   {% if page.excerpt %}
-  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}" />
+  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}">
   {% else %}
-  <meta property="og:description" content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}" />
+  <meta property="og:description" content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}">
   {% endif %}
 
   {% if page.title %}
@@ -31,9 +31,9 @@
   {% endif %}
 
   {% if page.url == "/" %}
-  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:url" content="{{ site.url }}">
   {% else %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
   {% endif %}
 
   {% if page.image %}
