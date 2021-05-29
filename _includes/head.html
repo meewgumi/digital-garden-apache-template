@@ -1,6 +1,10 @@
 <head>
   <meta charset="UTF-8">
 
+  {% if site.use_html_extension == false %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
