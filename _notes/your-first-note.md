@@ -45,10 +45,13 @@ https://twitter.com/jack/status/20
 You may embed media files within a note using HTML5 media tags. Here's an example for an audio file:
 
 "Jazzy Frenchy" by Benjamin Tissot from bensound.com
-<audio controls>
-  <source src="/assets/jazzyfrenchy.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
+<audio
+    controls
+    src="/assets/jazzyfrenchy.mp3", type="audio/mpeg">
+        Your browser does not support the
+        <code>audio</code> element.
 </audio>
+
 
 ### Site configuration
 
