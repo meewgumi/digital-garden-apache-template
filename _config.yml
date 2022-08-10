@@ -3,10 +3,10 @@ url:                 'https://garden.megu.space'
 favicon:              🥬
 
 # https://jekyllrb.com/docs/configuration/options/
-timezone: America/Los_Angeles
+timezone: Sweden/Stockholm
 
 # Comment out .htaccess if you're uploading to a non-Apache server such as Netlify
-include:             ['.htaccess']
+#include:             ['_pages', '.htaccess']
 
 # Remove obsidian-templates and delete the folder if you aren't using Obsidian Templates plugin
 exclude:             ['_includes/notes_graph.json','obsidian-templates']
@@ -21,6 +21,11 @@ show_notes_graph: false
 # Set to `true` to open non-internal links in new tabs, or
 # set to `false` to open non-internal links in current tab.
 open_external_links_in_new_tab: true
+
+# Set to `true` to replace tweet URLs with Twitter embeds.
+# Note that doing so will negatively the reader's privacy
+# as their browser will communicate with Twitter's servers.
+embed_tweets: false
 
 permalink:           slug
 
