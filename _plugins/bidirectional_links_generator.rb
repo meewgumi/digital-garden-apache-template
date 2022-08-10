@@ -34,28 +34,28 @@ class BidirectionalLinksGenerator < Jekyll::Generator
         # Replace double-bracketed links with label using note title
         # [[A note about cats|this is a link to the note about cats]]
         current_note.content.gsub!(
-          /\[\[#{note_title_regexp_pattern}\|(.+?)(?=\])\]\]/i,
+          /\[\[#{note_title_regexp_pattern}\|(.+?)(?=\])\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
         # Replace double-bracketed links with label using note filename
         # [[cats|this is a link to the note about cats]]
         current_note.content.gsub!(
-          /\[\[#{title_from_data}\|(.+?)(?=\])\]\]/i,
+          /\[\[#{title_from_data}\|(.+?)(?=\])\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
         # Replace double-bracketed links using note title
         # [[a note about cats]]
         current_note.content.gsub!(
-          /\[\[(#{title_from_data})\]\]/i,
+          /\[\[(#{title_from_data})\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
         # Replace double-bracketed links using note filename
         # [[cats]]
         current_note.content.gsub!(
-          /\[\[(#{note_title_regexp_pattern})\]\]/i,
+          /\[\[(#{note_title_regexp_pattern})\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
       end
@@ -65,8 +65,13 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       # links by greying them out and changing the cursor
       # Still need to find a way to exclude from codeblocks with ```
       current_note.content = current_note.content.gsub(
-        /\[\[([^\]]+)\]\]/i, # match on the remaining double-bracket links
-        <<~HTML.delete("\n") # replace with this HTML (\\1 is what was inside the brackets)
+        /
+        (?:^\[{2}.|\s{1}\[{2}) # Starting with [[ on newline or preceded by space
+        ([^\]]+) # Capture entire filename
+        \]{2} # Make sure it ends in ]]
+        (?!.*?[\r\n]+[`{3,}|~{3,}]) # Exclude codeblocks
+        /x, # match on the remaining double-bracket links
+        <<~HTML.chomp    # replace with this HTML (\\1 is what was inside the brackets)
           <span title='There is no note that matches this link.' class='invalid-link'>
             <span class='invalid-link-brackets'>[[</span>
             \\1
